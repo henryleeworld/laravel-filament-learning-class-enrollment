@@ -32,7 +32,7 @@ class LearningClass extends Model
     protected function casts(): array
     {
         return [
-            'price_per_student' => 'decimal:2',
+            // 'price_per_student' => 'decimal:2',
         ];
     }
 

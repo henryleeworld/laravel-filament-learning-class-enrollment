@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId('class_type_id')->constrained('class_types');
             $table->string('name');
             $table->text('description')->nullable();
-            $table->decimal('price_per_student', 10, 2);
+            $table->unsignedInteger('price_per_student'); // $table->decimal('price_per_student', 10, 2);
             $table->timestamps();
         });
     }

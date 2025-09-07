@@ -14,14 +14,12 @@ class LearningClassSeeder extends Seeder
     public function run(): void
     {
         $groupType = ClassType::where('name', 'Group')->first();
-        $oneOnOneType = ClassType::where('name', 'One-on-One')->first();
-        
-        // Create 8 group classes
+        $oneOnOneType = ClassType::where('name', 'One on one')->first();
+
         LearningClass::factory()->count(8)->create([
             'class_type_id' => $groupType->id,
         ]);
-        
-        // Create 5 one-on-one classes
+
         LearningClass::factory()->count(5)->create([
             'class_type_id' => $oneOnOneType->id,
         ]);

@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\LearningClasses\Schemas;
 
+use App\Models\ClassType;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
@@ -16,6 +17,7 @@ class LearningClassForm
                 Select::make('class_type_id')
                     ->label(__('Class type'))
                     ->relationship('classType', 'name')
+                    ->getOptionLabelFromRecordUsing(fn (ClassType $record) => __($record->name))
                     ->required(),
                 TextInput::make('name')
                     ->label(__('Name'))
@@ -27,7 +29,7 @@ class LearningClassForm
                     ->label(__('Price per student'))
                     ->numeric()
                     ->prefix('NT$') // ->prefix('$')
-                    ->step(0.01)
+                    ->step(1) // ->step(0.01)
                     ->required(),
             ]);
     }

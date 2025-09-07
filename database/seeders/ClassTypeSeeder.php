@@ -13,6 +13,6 @@ class ClassTypeSeeder extends Seeder
     public function run(): void
     {
         ClassType::create(['name' => 'Group']);
-        ClassType::create(['name' => 'One-on-One']);
+        ClassType::create(['name' => 'One on one']);
     }
 }

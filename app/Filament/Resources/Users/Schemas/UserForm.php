@@ -2,7 +2,6 @@
 
 namespace App\Filament\Resources\Users\Schemas;
 
-use App\Enums\RoleEnum;
 use App\Models\Role;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;

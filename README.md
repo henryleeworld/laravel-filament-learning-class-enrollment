@@ -35,8 +35,8 @@ $ npm run build
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/iSqsTcM.png)
-> 可以清楚的知道課程課表
+![](https://i.imgur.com/qfEj3nz.png)
+> 可以清楚的知道學習課程
 
-![](https://i.imgur.com/VYJLnyN.png)
-> 查看課程學生出席狀況
+![](https://i.imgur.com/mrIHQzR.png)
+> 查看學習課程學生出席狀況

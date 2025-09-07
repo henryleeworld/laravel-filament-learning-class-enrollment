@@ -2,7 +2,6 @@
 
 namespace App\Filament\Resources\ClassSchedules\Tables;
 
-use Filament\Actions\Action;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
@@ -62,11 +61,6 @@ class ClassSchedulesTable
             ])
             ->recordActions([
                 EditAction::make(),
-                Action::make('manage_attendance')
-                    ->label(__('Manage attendance'))
-                    ->icon('heroicon-o-clipboard-document-check')
-                    ->color('success')
-                    ->url(fn ($record) => route('filament.admin.resources.class-schedules.attendance', ['record' => $record])),
             ])
             ->toolbarActions([
                 BulkActionGroup::make([
